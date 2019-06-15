@@ -56,8 +56,8 @@ describe('CLI', () => {
   });
 
   it('unspecified port', async () => {
-    const { output } = await testBin('');
-    expect(/http:\/\/localhost:[0-9]+/.test(output.stdout)).toEqual(true);
+    const { stdout } = await testBin('');
+    expect(/http:\/\/localhost:[0-9]+/.test(stdout)).toEqual(true);
   });
 
   it('--color', async () => {
